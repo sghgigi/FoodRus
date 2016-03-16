@@ -1,13 +1,21 @@
-# FoodRus
-Final Project for CSE4413 (This is a platform built for Food retailer.)
+<html>
+<body>
 
+<H3>What</H3>
+<p>Final Project for CSE4413 (This is a platform built for Food retailer.)</p>
 
+<H3>FoodRus>
+<p><a href="https://github.com/sghgigi/FoodRus/blob/master/FoodRus_Front_Page.png" target="_blank"><img src="https://github.com/sghgigi/FoodRus/blob/master/FoodRus_Front_Page.png" alt="FoodRus image" title="FoodsRus" style="max-width:100%;"></a></p>
 
-Tech Stack
+<H3>Tech Stack</H3>
+<ul>
+<li>Java7</li>
+<li>JavaEE/J2EE</li>
+<li>SQL (Derby)</li>
+<li>JavaScript</li>
+<li>HTML5</li>
+<li>CSS</li>
+</ul>
 
-Java7
-JavaEE/J2EE
-SQL (Derby)
-JavaScript
-HTML5
-CSS
+</body>
+</html>
