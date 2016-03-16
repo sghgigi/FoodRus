@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+xmlns:c="http://java.sun.com/jsp/jstl/core"
+version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+		pageEncoding="UTF-8" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Insert title here</title>
+<link rel="StyleSheet" href="${pageContext.request.contextPath}/res/efood.css" type="text/css" 
+	title="cse4413" media="screen,print"/>
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/efood.js">;</script>
+
+</head>
+<body>
+	<FORM action="${pageContext.request.contextPath}/Front/Cart" method="post">
+	<c:if test="${!empty error}">
+		<p id="error">${error}</p>
+	</c:if>
+	
+	<TABLE border="1">
+	<TR>
+		<th>Number</th>
+		<th>Name</th>
+		<th>Unit Price</th>
+		<th>Quantity</th>
+		<th>Extended Price</th>
+	</TR>
+	<c:if test="${orderlist.item != null}">
+		<c:forEach items="${orderlist.item}" var="order" varStatus="loop">
+		<tr>
+	 		<td>${order.number}</td>
+			<td>${order.name}</td>
+			<td>${order.price}</td>
+			<td>
+			<input type="text" name="orderqty_${order.number}" id="${order.number}" 
+				value="${order.quantity }" onchange="checkqty(this)"/><BR />
+				<SPAN id="msg_${order.number}"></SPAN>
+			</td>
+			<td>
+			<input type="text" name="extendedPrice" id="extendedPrice" 
+				value="${order.extended}" readonly="readonly"/>
+			</td>	 
+		</tr>
+		</c:forEach>
+	</c:if>
+	
+	</TABLE>
+	
+	
+	
+	<table class="summ" align="right">
+	<tr>
+	 	<td align="right">SubTotal:</td>
+		<td>${subtotal}</td>
+	</tr>
+	<tr>
+	 	<td align="right">ShippingCost:</td>
+		<td>${shipping}</td>
+	</tr>
+	<tr>
+	 	<td align="right">HST:</td>
+		<td>${hst}</td>
+	</tr>
+	<tr>
+	 	<td align="right">Total:</td>
+		<td>${total}</td>
+	</tr>
+	</table>
+	
+	<DIV>
+	<input type="submit" name="Update" id="Update" value="Update"/>	
+	<input type="submit" name="ContinueShopping" id="ContinueShopping" value="Continue Shopping"/>	
+	<input type="submit" name="CheckitOut" id="CheckitOut" value="Check Out"/>	
+	</DIV>
+	</FORM>
+</body>
+</html>
+</jsp:root>

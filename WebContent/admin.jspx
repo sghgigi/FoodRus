@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" 
+	xmlns:f="http://java.sun.com/jsp/jstl/fmt">
+	<jsp:directive.page contentType="text/html; charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" session="false" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+	<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="StyleSheet"
+	href="${pageContext.request.contextPath}/res/itemPage.css"
+	type="text/css" title="cse4413Front" media="screen, print" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}/res/foodrus.js">;</script>
+</head>
+	<body>
+		<center><h1> Admin </h1></center>
+		<div id = "admin">
+			<c:if test="${not empty addToCartTimes}">
+			Average Add to Cart Time for ${cartCustomers} Customers: ${addToCartTimes} seconds
+			</c:if>
+			<br/>
+			<c:if test="${not empty checkoutTime}">
+			Average Checkout Time for ${checkoutCustomer} Customers: ${checkoutTime} seconds
+			</c:if>
+		</div>	
+		</body>
+	</html>
+</jsp:root>

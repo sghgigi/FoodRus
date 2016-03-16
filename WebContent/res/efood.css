@@ -1,0 +1,135 @@
+@CHARSET "ISO-8859-1";
+
+html 
+{
+	margin: 0;
+	padding: 0;
+	color: #000;
+/* 	background: #a7a09a; */
+}
+
+div
+{
+	border: 1px solid;
+	border-style:inset;
+	border-color: white;
+}
+
+
+#wrap 
+{
+	width: 1027px;
+	margin: 0 auto;
+/* 	background: #99c; */
+}
+
+#menu{
+	padding-top: 8px;
+	padding-bottom: 8px;	
+	padding-right: 5px;
+	float: right;
+}
+
+#id{
+	background:url(bg.jpg) no-repeat 0 0;
+}
+
+#Logo{
+	height:30px;
+	width: 200px;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+
+#welcome
+{
+	text-align: center;
+}
+
+#welcome img
+{
+	height: 70%;
+	width: 70%;
+}
+#picture
+{
+	height:108px;
+	width: 192px;
+}
+
+#header 
+{
+	padding: 5px 10px;
+/* 	background: #ddd; */
+}
+
+h1 
+{
+	margin: 0;
+}
+
+#nav 
+{
+	width: 1007px;
+	margin: 0 auto;
+	padding: 5px 10px;
+/* 	background: #c99; */
+}
+
+#nav ul 
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#nav li 
+{
+	display: inline;
+	margin: 0;
+	padding: 10px;
+}
+
+#main 
+{
+	float: left;
+	width: 780px;
+	padding: 10px;
+/* 	background: #9c9; */
+}
+
+h2 
+{
+	margin: 0 0 1em;
+}
+
+
+#sidebar 
+{
+	float: left;
+	width: 200px;
+	padding: 10px;
+/* 	background: #99c; */
+}
+
+#footer 
+{
+	clear: both;
+	padding: 5px 10px;
+/* 	background: #cc9; */
+}
+
+#footer p 
+{
+	margin: 0;
+	text-align:center;
+}
+
+* html #footer 
+{
+	height: 1px;
+}
+
+.login label, .login p {
+  display: inline;
+}

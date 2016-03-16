@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+		  xmlns:c="http://java.sun.com/jsp/jstl/core" 
+		  version="2.0">
+	<jsp:directive.page contentType="text/html; charset=UTF-8" 
+		pageEncoding="UTF-8" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Front</title>
+<link rel="StyleSheet" href="${pageContext.request.contextPath}/res/efood.css" type="text/css"
+	title="cse4413Front" media="screen, print" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/efood.js">;</script>
+</head>
+<body id="body" BACKGROUND="${pageContext.request.contextPath}/res/bg4.jpg" >
+
+    <div id="nav" >
+     
+        <a href="${pageContext.request.contextPath}/Front/">
+		<img src="${pageContext.request.contextPath}/res/logo.jpg"/>
+		</a>
+	
+    	
+    	
+		<form id="menu" action="${pageContext.request.contextPath}/Front/" method="post">
+		<INPUT type="text" id="keyword" name="keyword" value="" />
+		<INPUT type="submit" id="Search" name="Search" value="Search" />
+		<INPUT type="submit" id="ViewCart" name="ViewCart" value="View Cart"/>
+		<INPUT type="submit" id="Login" name="Login" value="Login"/>	
+		<INPUT type="submit" id="Logut" name="logout" value="Logout"/>
+		<INPUT type="submit" id="CheckOut" name="CheckOut" value="Check Out"/>
+	    </form>
+
+	</div>
+	<div id="wrap">
+		<div id="sidebar">
+			<h2>CATALOG</h2>
+			<p>Choose your favorite items by clicking the pictures</p>
+<!-- 				<li><a href="${pageContext.request.contextPath}/Front/">Home</a></li> -->			
+					<p>MEAT</p>
+					<a  href="Catalog?Meat=3">
+					<img src="${pageContext.request.contextPath}/res/meats.jpg" alt="FoodRUs" id="picture" />
+					</a>
+					
+					
+					<p>CHEESE</p>
+					<a href="Catalog?Cheese=4">
+					<img src="${pageContext.request.contextPath}/res/cheese.jpg" alt="FoodRUs" id="picture" />
+					</a>
+					
+					
+					<p>ICE CREAM</p>
+					<a href="Catalog?IceCream=5">
+					<img src="${pageContext.request.contextPath}/res/icecream.jpg" alt="FoodRUs" id="picture" />
+					</a>
+					
+					
+					<p>CEREAL</p>
+					<a href="Catalog?Cereal=6">
+					<img src="${pageContext.request.contextPath}/res/cereal.jpeg" alt="FoodRUs" id="picture" />
+					</a>
+				    <br/>
+		</div>
+
+		<div id="main">
+		
+		<c:choose>
+		<c:when test="${empty target}">
+		<section id="welcome">
+		<h1>Welcome to Foods R Us!</h1>
+	    <img src="${pageContext.request.contextPath}/res/bg2.jpg" />
+	    </section>
+		</c:when>
+		<c:otherwise>
+			<jsp:include page="${target}"></jsp:include>
+		</c:otherwise>
+		</c:choose>
+
+		</div>
+
+		<div id="footer">
+			<p>Satisfactory guaranteed!</p>
+		</div>
+	</div>
+
+
+</body>
+</html>
+</jsp:root>

@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	text-align: center;
+}
+#smile
+{
+	height:150px;
+	width: 150px;
+}
+
+#upload-file-container {
+   background: url(images/custom-file-input.png) no-repeat;
+}
