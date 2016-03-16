@@ -2,7 +2,7 @@
 <body>
 
 <H3>What</H3>
-<p>Final Project for CSE4413 (This is a platform built for Food retailer.)</p>
+<p>Final Project for CSE4413 (This is a platform built for Food retailer.) Unfortunately, since the username and password for database is expired, it could not connect to the database at YORK University.</p>
 
 <H3>FoodRus>
 <p><a href="https://github.com/sghgigi/FoodRus/blob/master/FoodRus_Front_Page.png" target="_blank"><img src="https://github.com/sghgigi/FoodRus/blob/master/FoodRus_Front_Page.png" alt="FoodRus image" title="FoodsRus" style="max-width:100%;"></a></p>
